@@ -5,5 +5,5 @@
   <li>Reactjs</li>
   <li>Css Modules</li>
   
-  <img src="./images/tela.png" />
+  <img src="./public/images/tela1" />
 </ul>
