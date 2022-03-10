@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange-500: #DF841F;
+  --blue-500: #33607F;
+  
+  --gray-100: #C4C3C1;
+  --gray-500: #4B4746;
+
+  --white: #FFFFFF;
+}
+
+body {
+  font: 400 1rem 'Poppins', sans-serif;
+  background-color: var(--gray-500);
+}
+
+body, textarea, input, button, select {
+  font: 400 1rem 'Poppins', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}

@@ -1,0 +1,37 @@
+.headerContainer {
+  height: 3.43rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.headerContent {
+  height: 3.43rem;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    width: 101px;
+    height: 31px;
+  }
+  
+  nav {
+    height: 3.43rem;
+    
+    a {
+      display: inline-block;
+      height: 3.43rem;
+      line-height: 3.43rem;
+      font-size: 1.06rem;
+      font-weight: 300;
+      color: var(--white);
+
+      & + a {
+        margin-left: 1.62rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.mainContainer {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  .titleAndButton {
+    margin-top: 2.62rem;
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    button {
+      height: 2.06rem;
+      font-size: 0.93rem;
+      width: 132px;
+      color: var(--white);
+      background: var(--orange-500);
+      border-radius: 0.37rem;
+      border: 0;
+
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
+  }
+
+  table {
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0 0.5rem;
+
+    th {
+      color: var(--white);
+      font-weight: 500;
+      padding: 1rem 2rem;
+      text-align: left;
+      line-height: 0.8rem;
+    }
+
+    td {
+      background: var(--gray-100);
+      padding: 0.7rem 2rem;
+      border: 0;
+      color: var(--blue-500);
+      cursor: pointer;
+    
+      &:first-child {
+        border-radius: 0.50rem 0 0 0.50rem;
+      }
+    
+      &:last-child {
+        border-radius: 0 0.50rem 0.50rem 0;
+      }
+    }
+  }
+}
