@@ -1,21 +1,30 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import Head from 'next/head'
 import { Header } from '../components/Header'
-import { EditItemModal } from '../components/EditItemModal';
+import { EditItemModal } from '../components/EditItemModal'
+import { NewItemModal } from '../components/NewItemModal'
 
-import styles from './items.module.scss';
+import styles from './items.module.scss'
 
 // Modal.setAppE  lement('#root');
 
 export default function Home() {
-  const [modalOpenEditItem, setModalOpenEditItem] = useState(false);
+  const [modalOpenEditItem, setModalOpenEditItem] = useState(false)
+  const [modalOpenNewItem, setModalOpenNewItem] = useState(false)
 
   function handleOpenModalEdit() {
-    setModalOpenEditItem(true);
+    setModalOpenEditItem(true)
   }
 
   function handleCloseModalEdit() {
-    setModalOpenEditItem(false);
+    setModalOpenEditItem(false)
+  }
+  function handleOpenModalNewItem() {
+    setModalOpenNewItem(true)
+  }
+
+  function handleCloseModalNewItem() {
+    setModalOpenNewItem(false)
   }
 
   return (
@@ -29,11 +38,7 @@ export default function Home() {
       <main className={styles.mainContainer}>
         <div className={styles.titleAndButton}>
           <h1>Items cadastrados</h1>
-          <button 
-            type="button"
-          >
-            Novo Item
-          </button>
+          <button type="button" onClick={handleOpenModalNewItem}>Novo Item</button>
         </div>
 
         <table>
@@ -73,7 +78,14 @@ export default function Home() {
         </table>
       </main>
 
-     <EditItemModal isOpen={modalOpenEditItem} onRequestClose={handleCloseModalEdit  } />
+      <NewItemModal 
+        isOpen={modalOpenNewItem}
+        onRequestClose={handleCloseModalNewItem} 
+      />
+      <EditItemModal
+        isOpen={modalOpenEditItem}
+        onRequestClose={handleCloseModalEdit}
+      />
     </>
   )
 }
